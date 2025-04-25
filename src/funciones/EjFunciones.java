@@ -15,7 +15,11 @@ public class EjFunciones {
         mostrarMensajeBienvenida("William");
         mostrarMensajeBienvenida("William","Gonzales");
         log.info(mostrarMensajeBienvenida("William",2));
+
         mostrarNroDeCreciente(3);
+
+        String [] nombres={"Juan","Maria","Pedro"};
+        mostrarNombresLista(nombres);
 
     }
     static double sumarDosNumeros(int nro1, double nro2){
@@ -49,5 +53,13 @@ public class EjFunciones {
             log.info("El nro es:"+nro);
             mostrarNroDeCreciente(nro); //la funcion se llama a si misma
         }
+    }
+
+    static void mostrarNombresLista(String[] nombres){
+        String texto="Las personas asistentes al curso son: ";
+        for (int i=0 ;i<nombres.length; i++){
+            texto=texto + nombres[i]+" ";
+        }
+        log.info(texto);
     }
 }
